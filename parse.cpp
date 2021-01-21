@@ -53,8 +53,13 @@ shared_ptr<demogData> readCSVLineDemog(std::string theLine) {
     double popUnder18 = stod(getField(ss));
     double popUnder5 = stod(getField(ss));
 
+    //step 4.1
+    double BAup = stod(getField(ss));
+    double HSup = stod(getField(ss));
+
+    //step 4.2
     return make_shared<demogData>(name, state, popOver65, popUnder18,
-            popUnder5);
+            popUnder5, BAup, HSup);
 }
 
 
